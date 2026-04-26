@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Drawer, List, ListItem, ListItemButton } from '@mui/material'
 import { useNavigate } from 'react-router'
-import { axiosApi } from '../axiosApi'
+import { axiosApi } from '../../axiosApi'
 
 export const NavBar = () => {
   const [categories, setCategories] = useState<string[]>([])

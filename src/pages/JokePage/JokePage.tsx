@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
-import { axiosApi } from '../axiosApi'
+import { axiosApi } from '../../axiosApi'
 import { Typography, Container } from '@mui/material'
 
 export const JokePage = () => {
@@ -10,7 +10,7 @@ export const JokePage = () => {
   useEffect(() => {
     const fetchJoke = async () => {
       const { data } = await axiosApi.get(`/random?category=${category}`)
-      setJoke(data.value
+      setJoke(data.value)
     }
     if (category) fetchJoke()
   }, [category])
